@@ -57,9 +57,22 @@ def recursive_permutations(matrix):
 
 """
 Explanatory note: This uses a recursive method.
-When we add an additional row of elements, we can add each of those elements to any of the existing permutations
+When we add an additional row of elements, we can add each of those elements to any of the existing permutations.
 i.e the permutations possible with n+1 rows can be discovered by taking the possible permutations with n rows, and permuting them with the n+1th row.
 """
+"""
+For instance, say our data is:
+a b 
+c d
+e f
+
+Permutations of first two rows are ac, ad, bc, bd
+We can now combine e with any of the above 4, or f with any of the above 4.
+The permutations of 3 rows can be deduced by taken the permutations of the first two rows (ac,ad,bc,bd) and permuting them with the 3rd row.
+We get (ace,ade,bce,bde, acf,adf,bcf,bdf)
+Hence the recursive method
+"""
+
 
 
 def main():
